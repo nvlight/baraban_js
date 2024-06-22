@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Игровой барабан</title>
+    <style>
+        .circle {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background-color: lightblue;
+            position: relative;
+        }
+
+        .triangle {
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 86.6px solid red;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .triangle:nth-child(1) { transform: translate(-50%, -50%) rotate(51.42deg); }
+        .triangle:nth-child(2) { transform: translate(-50%, -50%) rotate(102.84deg); }
+        .triangle:nth-child(3) { transform: translate(-50%, -50%) rotate(154.26deg); }
+        .triangle:nth-child(4) { transform: translate(-50%, -50%) rotate(205.68deg); }
+        .triangle:nth-child(5) { transform: translate(-50%, -50%) rotate(257.1deg); }
+        .triangle:nth-child(6) { transform: translate(-50%, -50%) rotate(308.52deg); }
+        .triangle:nth-child(7) { transform: translate(-50%, -50%) rotate(359.94deg); }
+    </style>
+</head>
+<body>
+<div class="circle">
+    <div class="triangle">Текст 1</div>
+    <div class="triangle" style="border-bottom-color: green;">Текст 2</div>
+    <div class="triangle" style="border-bottom-color: blue;">Текст 3</div>
+    <div class="triangle" style="border-bottom-color: yellow;">Текст 4</div>
+    <div class="triangle" style="border-bottom-color: purple;">Текст 5</div>
+    <div class="triangle" style="border-bottom-color: orange;">Текст 6</div>
+    <div class="triangle" style="border-bottom-color: pink;">Текст 7</div>
+</div>
+</body>
+</html>

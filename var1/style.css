@@ -1,0 +1,120 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #34495e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+
+}
+
+.container {
+    width: 560px;
+    height: 560px;
+    background: #ccc;
+    border-radius: 50%;
+    border: 15px solid #dde;
+    position: relative;
+    overflow: hidden;
+    transition: 5s;
+}
+
+.container div {
+    height: 50%;
+    width: 50%;
+    position: absolute;
+    clip-path: polygon(100% 0, 50% 100%, 0 0);
+    transform: translate(-50%);
+    transform-origin: bottom;
+    text-align: center;
+    display: flex;
+    justify-content: center;  
+    /* align-items: center; */
+    font-size: 20px;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: #fff;
+    left: 135px;
+}
+
+.container .one {
+    background: blue;
+    transform: rotate(0deg);
+    /* font-size: 15px;  */
+}
+
+.container .two {
+    background: orange;
+    transform: rotate(45deg);
+}
+
+.container .three {
+    background: red;
+    transform: rotate(90deg);
+}
+
+.container .four {
+    background: #4caf50;
+    transform: rotate(135deg);
+}
+
+.container .five {
+    background: #009688;
+    transform: rotate(180deg);
+}
+
+.container .six {
+    background: #795548;
+    transform: rotate(225deg);
+}
+
+.container .seven {
+    background: #9c27b0;
+    transform: rotate(270deg);
+}
+
+.container .eight {
+    background: grey;
+    transform: rotate(315deg);
+}
+
+.arrow {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: rotateX(-50%);
+    color: #fff;
+}
+
+.arrow::before {
+    content: '\1f817';
+    font-size: 50px;
+}
+
+#spin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    background: #e2e2e2;
+    text-transform: uppercase;
+    border: 8px solid #fff;
+    font-weight: bold;
+    font-size: 20px;
+    color: #fff;
+    width: 80px;
+    height: 80px;
+    font-family: sans-serif;
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+    letter-spacing: 1px;
+}
+
